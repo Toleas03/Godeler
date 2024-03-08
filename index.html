@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Godel Numbering TM</title>
+</head>
+
+<body>
+    <div id="content">
+        <div id="editor-holder" class="center">
+            <table cellspacing="0" cellpading="8">
+                <tbody>
+                    <tr valign="center">
+                        <td>
+                            <div style="display: inline-block; margin-left:30px; margin-right: 30px">
+                                <table cellspacing="0" cellpadding="4">
+                                    <tbody>
+                                        <tr>
+                                            <td><b>State</b></td>
+                                            <td><b>Symbol</b></td>
+                                            <td><b>NewSymbol</b></td>
+                                            <td><b>NewState</b></td>
+                                            <td><b>Action</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <select id="state"></select>
+                                            </td>
+                                            <td>
+                                                <select id="symbol">
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select id="newsymbol">
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select id="newstate"></select>
+                                            </td>
+                                            <td>
+                                                <select id="move">
+                                                    <option value="L">L</option>
+                                                    <option value="R">R</option>
+                                                    <option value="0">0</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td><button id="edit-btn" disabled=""
+                                title="Disabled because current values match the existing rule.">Change Rule</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="actions-holder" class="center">
+            <table id="rules-table" cellspacing="0" width="500">
+                <tbody>
+                    <tr>
+                        <th>State</th>
+                        <th>Symbol</th>
+                        <th>New<br>Symbol</th>
+                        <th>New<br>State</th>
+                        <th>Action</th>
+                        <th>Delete</th>
+                    </tr>
+                </tbody>
+                <tbody id="rules">
+                </tbody>
+            </table>
+        </div>
+        <button id="gordel-btn">Gordel That</button>
+        <h2 id="gordel-number" style="text-align: center;"></h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

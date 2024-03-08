@@ -1,0 +1,24 @@
+.center{
+    margin: 0 auto;
+    width: 35%;
+    padding: 10px;
+    text-align: center;
+}
+
+#actions-holder table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#actions-holder td, th {
+    border: 1px solid black;
+}
+
+#gordel-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+.content {
+    white-space: normal;
+}
