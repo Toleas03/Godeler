@@ -4,7 +4,7 @@ const moves = ["R", "L", "0"];
 const prime = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73];
 
 
-function fillNumbers(id, end) {
+function fillNumbers(id) {
     var select = document.getElementById(id);
     states.forEach(function (letter) {
         var option = document.createElement("option");
@@ -23,8 +23,8 @@ function fillLetters(selectId) {
 }
 
 function loadE() {
-    fillNumbers("state", 21);
-    fillNumbers("newstate", 21);
+    fillNumbers("state");
+    fillNumbers("newstate");
     fillLetters("symbol");
     fillLetters("newsymbol");
 }
