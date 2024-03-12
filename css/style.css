@@ -1,16 +1,17 @@
-.center{
-    margin: 0 auto;
-    width: 35%;
+.center {
     padding: 10px;
     text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-#actions-holder table {
-    border-collapse: collapse;
-    table-layout: fixed;
+.center table {
+    max-width: 100%;
 }
 
-#actions-holder td, th {
+#actions-holder td,
+th {
     border: 1px solid black;
 }
 
@@ -21,4 +22,31 @@
 
 .content {
     white-space: normal;
+}
+
+#json-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+#json-text {
+    width: 450px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    resize: none;
+}
+
+#json-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+#json-container button {
+    display: inline-block;
+    margin: 0 5px;
+    margin-top: 10px;
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://media.tenor.com/1pHrDlBVWWwAAAAi/gura-dance-gura.gif" type="image/gif" >
     <title>Godel Numbering TM</title>
 </head>
 
@@ -21,8 +22,8 @@
                                         <tr>
                                             <td><b>State</b></td>
                                             <td><b>Symbol</b></td>
-                                            <td><b>NewSymbol</b></td>
                                             <td><b>NewState</b></td>
+                                            <td><b>NewSymbol</b></td>
                                             <td><b>Action</b></td>
                                         </tr>
                                         <tr>
@@ -30,22 +31,16 @@
                                                 <select id="state"></select>
                                             </td>
                                             <td>
-                                                <select id="symbol">
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select id="newsymbol">
-                                                </select>
+                                                <select id="symbol"></select>
                                             </td>
                                             <td>
                                                 <select id="newstate"></select>
                                             </td>
                                             <td>
-                                                <select id="move">
-                                                    <option value="L">L</option>
-                                                    <option value="R">R</option>
-                                                    <option value="0">0</option>
-                                                </select>
+                                                <select id="newsymbol"></select>
+                                            </td>
+                                            <td>
+                                                <select id="move"></select>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -65,8 +60,8 @@
                     <tr>
                         <th>State</th>
                         <th>Symbol</th>
-                        <th>New<br>Symbol</th>
                         <th>New<br>State</th>
+                        <th>New<br>Symbol</th>
                         <th>Action</th>
                         <th>Delete</th>
                     </tr>
@@ -77,6 +72,12 @@
         </div>
         <button id="gordel-btn">Godel That</button>
         <h2 id="gordel-number" style="text-align: center;"></h2>
+        <button id="json-btn">Export/Import</button>
+        <div id="json-container" style="display: none;" >
+            <textarea id="json-text"></textarea>
+            <button id="import-btn">Import</button>
+            <button id="export-btn">Export</button>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>
     <script src="./js/main.js"></script>
