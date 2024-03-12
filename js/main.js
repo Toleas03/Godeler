@@ -130,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         const jsonDataString = JSON.stringify(jsonData);
-        console.log(jsonDataString)
         jsonText.value = jsonDataString;
     }
 
