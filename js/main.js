@@ -220,8 +220,45 @@ document.addEventListener("DOMContentLoaded", function () {
         updateButton();
     });
 
+    function primeFactorize(number) {
+        var num = new Decimal(number);
+        const factors = [];
+        var i = 0;
+
+        while (num.gte(2) && i < prime.length) {
+            if (num.mod(prime[i]).eq(0)) {
+                let exponent = 0;
+                // Count how many times the current prime factor divides the number
+                while (num.mod(prime[i]).eq(0)) {
+                    exponent++;
+                    num = num.div(prime[i]);
+                }
+                factors.push([prime[i],exponent]);
+            }
+            else {
+                i++;
+            }
+        }
+
+        return factors;
+    }
+
 
     var gordelBtn = document.getElementById("gordel-btn");
+    var actionBtn = document.getElementById("action-btn");
+
+    actionBtn.addEventListener("click", function () {
+        var gordel = document.getElementById("gordel-in");
+        var value;
+        try {
+            value = new Decimal(gordel.value);
+        }
+        catch {
+            alert("Invalid Number");
+            return;
+        }
+        var primed = primeFactorize(value);
+    });
 
     gordelBtn.addEventListener("click", function () {
         var gordel = document.getElementById("gordel-number")
@@ -245,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
             aList.push(GNa)
         }
         aList.sort((a, b) => b - a);
-        var bigSum = new Decimal(0);
+        var bigSum = new Decimal(1);
         var output = "";
         for (var i = 0; i < aList.length; i++) {
             if (i != 0) {
@@ -254,10 +291,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             //bigSum += BigInt(prime[i]) ** BigInt(aList[i]);
 
-            bigSum = Decimal.plus(Decimal.pow(prime[i], aList[i]), bigSum);
+            bigSum = bigSum.times(Decimal.pow(prime[i], aList[i]));
             output += prime[i] + "<sup>" + aList[i].toFixed(0) + "</sup>"
         }
-        gordel.innerHTML = output + "</br>" + "=" + "</br>" + bigSum;
+        if (!output) {
+            output = 0;
+            bigSum = 0;
+        }
+        gordel.innerHTML = output + "</br>" + "≈" + "</br>" + bigSum.floor();
     });
 
 });

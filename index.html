@@ -11,6 +11,7 @@
 
 <body>
     <div id="content">
+        <h1>Godel Numbering Turing Machines</h1>
         <div id="editor-holder" class="center">
             <table cellspacing="0" cellpading="8">
                 <tbody>
@@ -71,7 +72,9 @@
             </table>
         </div>
         <button id="gordel-btn">Godel That</button>
-        <h2 id="gordel-number" style="text-align: center;"></h2>
+        <h2 id="gordel-number" style="text-align: center;">0<br>≈<br>0</h2>
+        <input id="gordel-in" placeholder="Insert Gordel Number...">
+        <button id="action-btn">Action That</button>
         <button id="json-btn">Import/Export</button>
         <div id="json-container" style="display: none;" >
             <textarea id="json-text"></textarea>
@@ -79,7 +82,17 @@
             <button id="export-btn">Export</button>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>
+    <div class="description center">
+        <p>The Godel Numbering function used is based on the course material of Foundations 2 (F29FB) taught by 
+            <a href="https://www.macs.hw.ac.uk/~fairouz/" target="_blank">Fairouz Kamareddine</a> and 
+            <a href="https://www.macs.hw.ac.uk/~jbw/" target="_blank">Joe Wells</a>.
+        </p>
+    </div>
+    <p class="center">NOTE: COPYING THE GODEL NUMBER AND REGIVING IT WONT USUALLY WORK AS THE GODEL NUMBER IS AN APPROXIMATE UNLESS GIVEN IN THE PRIME FACTORIZATION FORM.</p>
+    <div class="footer">
+        <p>Made by <a href="https://github.com/Toleas03" target="_blank" class="name">Ammar Irsan</a></p>
+    </div>
+    <script src="./js/break_eternity.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
